@@ -20,7 +20,7 @@ export default function Header({ navigation, title }) {
       />
       <View style={styles.headerHero}>
         <Image
-          source={require("../assets/heart_logo.png")}
+          source={require("../assets/head_logo.png")}
           style={styles.headerImage}
         />
         <Text style={styles.headerText}>{title}</Text>

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
   container: {
@@ -12,16 +12,18 @@ export const globalStyles = StyleSheet.create({
   //   marginBottom: 12
   // },
   titleText: {
-    fontFamily: "exo2-bold",
-    fontSize: 18,
-    color: "#333"
+    fontFamily: 'exo2-bold',
+    fontSize: 20,
+    color: '#333'
   },
   subtitleText: {
-    fontFamily: "exo2-regular",
-    fontSize: 15,
-    color: "#333"
+    fontFamily: 'exo2-regular',
+    fontSize: 16,
+    color: '#333'
   },
   paragraph: {
+    fontFamily: 'exo2-regular',
+    fontSize: 14,
     marginVertical: 8,
     lineHeight: 20
   },
@@ -30,7 +32,14 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 5,
     borderColor: '#eee',
     padding: 10,
-    fontSize: 18,
+    fontSize: 18
+  },
+  errorText: {
+    marginTop: 5,
+    marginBottom: 14,
+    color: 'crimson',
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 });
 
@@ -42,4 +51,4 @@ export const images = {
     '4': require('../assets/rating-4.png'),
     '5': require('../assets/rating-5.png')
   }
-}
+};
