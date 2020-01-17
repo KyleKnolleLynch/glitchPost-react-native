@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Button, TextInput, View, Text } from 'react-native';
+import { TextInput, View, Text } from 'react-native';
 import { globalStyles } from '../styles/global';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import FlatButton from '../shared/button';
 
 const glitchSchema = yup.object({
   game: yup
@@ -55,18 +56,18 @@ const GlitchForm = ({ addGlitch }) => {
               value={formikProps.values.title}
               onBlur={formikProps.handleBlur('title')}
             />
-              <Text style={globalStyles.errorText}>
+            <Text style={globalStyles.errorText}>
               {formikProps.touched.title && formikProps.errors.title}
             </Text>
             <TextInput
-              multiline
+              multiline minHeight={60}
               style={globalStyles.input}
               placeholder='Glitch/Method Details'
               onChangeText={formikProps.handleChange('body')}
               value={formikProps.values.body}
               onBlur={formikProps.handleBlur('body')}
             />
-              <Text style={globalStyles.errorText}>
+            <Text style={globalStyles.errorText}>
               {formikProps.touched.body && formikProps.errors.body}
             </Text>
             <TextInput
@@ -77,14 +78,10 @@ const GlitchForm = ({ addGlitch }) => {
               keyboardType='numeric'
               onBlur={formikProps.handleBlur('rating')}
             />
-              <Text style={globalStyles.errorText}>
+            <Text style={globalStyles.errorText}>
               {formikProps.touched.rating && formikProps.errors.rating}
             </Text>
-            <Button
-              title='submit'
-              color='#FF720B'
-              onPress={formikProps.handleSubmit}
-            />
+            <FlatButton text='submit' onPress={formikProps.handleSubmit} />
           </View>
         )}
       </Formik>

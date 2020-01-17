@@ -35,8 +35,8 @@ export const globalStyles = StyleSheet.create({
     fontSize: 18
   },
   errorText: {
-    marginTop: 5,
-    marginBottom: 14,
+    marginTop: 4,
+    marginBottom: 10,
     color: 'crimson',
     fontWeight: 'bold',
     textAlign: 'center'
